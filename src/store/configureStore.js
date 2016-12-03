@@ -1,6 +1,7 @@
 import {createStore, compose, applyMiddleware} from 'redux';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import thunk from 'redux-thunk';
+import ReduxPromise from 'redux-promise';
 import rootReducer from '../reducers';
 
 function configureStoreProd(initialState) {
@@ -9,6 +10,7 @@ function configureStoreProd(initialState) {
 
     // thunk middleware can also accept an extra argument to be passed to each thunk action
     // https://github.com/gaearon/redux-thunk#injecting-a-custom-argument
+    // ReduxPromise
     thunk,
   ];
 
@@ -24,6 +26,7 @@ function configureStoreDev(initialState) {
 
     // Redux middleware that spits an error on you when you try to mutate your state either inside a dispatch or between dispatches.
     reduxImmutableStateInvariant(),
+    ReduxPromise,
 
     // thunk middleware can also accept an extra argument to be passed to each thunk action
     // https://github.com/gaearon/redux-thunk#injecting-a-custom-argument

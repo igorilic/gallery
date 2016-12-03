@@ -1,0 +1,29 @@
+.header {
+
+  text-align: center;
+  margin: 20px auto;
+  a {
+    text-align: center;
+    font-family: $font-logo;
+    font-size: $font-logo-size;
+    float: left;
+    text-decoration: none;
+    cursor: pointer;
+    color: $deep-gray;
+    font-weight: $weight-logo;
+    margin: 0px;
+    padding: 0 10px;
+    border-width: 0 1px 0 0px;
+    border-color: $light-gray;
+    border-style: solid;
+    &:last-child {
+      border-width: 0;
+    }
+    &:hover {
+      color: $light-gray;
+    }
+  }
+  #logo {
+    padding: 5px 0;
+  }
+}

@@ -1,9 +1,14 @@
 import { combineReducers } from 'redux';
-import fuelSavings from './fuelSavingsReducer';
+
+// import fuelSavings from './fuelSavingsReducer';
 import {routerReducer} from 'react-router-redux';
+import gallery from './galleryReducer';
+import ajaxCallsInProgress from './ajaxStatusReducer';
 
 const rootReducer = combineReducers({
-  fuelSavings,
+  // fuelSavings,
+  gallery,
+  ajaxCallsInProgress,
   routing: routerReducer
 });
 

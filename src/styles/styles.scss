@@ -1,7 +1,19 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
+$font-logo: 'Open Sans Condensed';
+$font-logo-size: 16px;
+$weight-logo: 300;
+$weight-header: 700;
 /* Variables */
 $vin-blue: #5bb7db;
 $vin-green: #60b044;
 $vin-red: #ff0000;
+$deep-blue: #15157b;
+$light-blue: lighten($deep-blue, 20);
+$deep-gray: grayscale($deep-blue);
+$light-gray: grayscale($light-blue);
+
+@import 'app';
 
 /* Styles */
 body {
