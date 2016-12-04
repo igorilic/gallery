@@ -12,8 +12,8 @@ class  GalleryPage extends Component {
   }
 
   renderList() {
-    if (this.props.gallery) {
-      return this.props.gallery.map(img => {
+    if (this.props.images) {
+      return this.props.images.map(img => {
         return (
           <li key={img.id}>
             <img src={img.webformatURL} alt="" width="250px"/>
@@ -36,12 +36,12 @@ class  GalleryPage extends Component {
 
 GalleryPage.propTypes = {
   fetchImages: PropTypes.func.isRequired,
-  gallery: PropTypes.arrayOf(PropTypes.object).isRequired
+  images: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 function mapStateToProps(state) {
   return {
-    gallery: state.gallery
+    images: state.images
   };
 }
 

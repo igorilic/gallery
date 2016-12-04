@@ -9,6 +9,7 @@ import initialState from './initialState';
 export default function galleryReducer(state = initialState.images, action) {
   switch(action.type) {
     case FETCH_IMAGES_SUCCESS:
+      debugger;
       return action.payload.hits;
     default:
       return state;
